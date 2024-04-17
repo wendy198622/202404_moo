@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>沐松琚</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="" />
+    <!-- <meta property="og:image" content="https://www.zyed.com.tw/VITRUVIUS/img/1200x630.png"> -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <!-- <script type="text/javascript" src="js/examples.js"></script> -->
+    <!-- <script type="text/javascript" src="js/slick.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    
+</head>
+
+<body>
+
+    <section id="fullpage" class="fullpage">
+        <div class="section theme theme1" id="section0">
+            <div class="title wow fadeInDown" data-wow-duration="2s" data-wow-delay="0s">
+                <img src="img/theme1_title.svg" alt="">
+            </div>
+            <div class="subtitle wow fadeInDown" data-wow-duration="2s" data-wow-delay="0.5s">
+                <img class="pc" src="img/theme1_subtitle.svg" alt="">
+                <img class="mob" src="img/theme1_subtitle_mob.svg" alt="">
+            </div>
+            <div class="info wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                <img class="pc" src="img/theme1_info.svg" alt="">
+                <img class="mob" src="img/theme1_info_mob.svg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+<script>
+
+    $(document).ready(function () {
+
+        new WOW().init();
+
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['01'],
+            sectionsColor: ['#B6F57D'],
+            navigation: false,
+            scrollBar: true,
+            autoScrolling: true,
+            responsiveWidth: 960
+            // afterResponsive: function(isResponsive){
+            //     autoScrolling: false,
+            // }
+        });
+
+        //box height
+		// if( $(window).width() < 960 ){
+        //     $('.photo').addClass('slick-photo');
+		// }
+		// else{
+		// }
+
+        // $('.slick-photo').slick({
+        //     infinite: true,
+        //     dots: false,
+        //     arrows: true,
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1
+        // });
+
+    });
+
+    var mySwiper = new Swiper ('.swiper-container', {
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+                clickable: true,
+            renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    })
+
+
+</script>
+
+
+
+</html>
